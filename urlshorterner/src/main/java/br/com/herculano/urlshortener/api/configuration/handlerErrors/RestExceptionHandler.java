@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.configuration.handlerErrors;
+package br.com.herculano.urlshortener.api.configuration.handlerErrors;
 
 import java.nio.file.AccessDeniedException;
 import java.util.List;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import br.com.herculano.urlshorterner.api.configuration.system_message.CommonMessage;
+import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @ControllerAdvice

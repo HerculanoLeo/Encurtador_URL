@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.entity;
+package br.com.herculano.urlshortener.api.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.configuration.handlerErrors;
+package br.com.herculano.urlshortener.api.configuration.handlerErrors;
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.jsontype.impl.TypeIdResolverBase;

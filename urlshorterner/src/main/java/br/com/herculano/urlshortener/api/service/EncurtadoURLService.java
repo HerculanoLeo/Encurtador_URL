@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.service;
+package br.com.herculano.urlshortener.api.service;
 
 import java.util.Optional;
 
@@ -8,9 +8,9 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import br.com.herculano.urlshorterner.api.configuration.system_message.CommonMessage;
-import br.com.herculano.urlshorterner.api.entity.EncurtadoURL;
-import br.com.herculano.urlshorterner.api.respository.jpsRespository.EncurtadorURLRepository;
+import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
+import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
+import br.com.herculano.urlshortener.api.respository.jpsRespository.EncurtadorURLRepository;
 
 @Service
 public class EncurtadoURLService extends ServiceTemplate<EncurtadoURL, EncurtadorURLRepository, CommonMessage> {

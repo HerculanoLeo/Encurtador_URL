@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.controller.response;
+package br.com.herculano.urlshortener.api.controller.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

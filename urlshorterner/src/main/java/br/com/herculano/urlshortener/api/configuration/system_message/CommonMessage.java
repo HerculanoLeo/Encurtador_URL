@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.configuration.system_message;
+package br.com.herculano.urlshortener.api.configuration.system_message;
 
 import org.springframework.stereotype.Component;
 

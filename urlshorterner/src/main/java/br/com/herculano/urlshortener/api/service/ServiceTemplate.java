@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.service;
+package br.com.herculano.urlshortener.api.service;
 
 import java.util.Optional;
 
@@ -8,8 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.herculano.urlshorterner.api.configuration.system_message.CommonMessage;
-import br.com.herculano.urlshorterner.api.configuration.system_message.MessageTemplate;
+import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
+import br.com.herculano.urlshortener.api.configuration.system_message.MessageTemplate;
 
 @SuppressWarnings("rawtypes")
 public class ServiceTemplate<E, JPA, M extends MessageTemplate> {

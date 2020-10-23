@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.controller;
+package br.com.herculano.urlshortener.api.controller;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,9 +15,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import br.com.herculano.urlshorterner.api.controller.response.EncurtadorURLResponse;
-import br.com.herculano.urlshorterner.api.entity.EncurtadoURL;
-import br.com.herculano.urlshorterner.api.service.EncurtadoURLService;
+import br.com.herculano.urlshortener.api.controller.response.EncurtadorURLResponse;
+import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
+import br.com.herculano.urlshortener.api.service.EncurtadoURLService;
 
 @Controller
 @RequestMapping("/")

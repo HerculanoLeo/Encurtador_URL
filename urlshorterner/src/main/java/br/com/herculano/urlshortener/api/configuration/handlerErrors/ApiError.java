@@ -1,4 +1,4 @@
-package br.com.herculano.urlshorterner.api.configuration.handlerErrors;
+package br.com.herculano.urlshortener.api.configuration.handlerErrors;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
