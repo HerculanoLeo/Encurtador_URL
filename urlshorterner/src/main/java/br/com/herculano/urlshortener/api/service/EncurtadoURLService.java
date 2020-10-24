@@ -1,5 +1,6 @@
 package br.com.herculano.urlshortener.api.service;
 
+import java.time.LocalDateTime;
 import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
@@ -9,8 +10,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
+import br.com.herculano.urlshortener.api.constant.StatusEnum;
 import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
-import br.com.herculano.urlshortener.api.respository.jpsRespository.EncurtadorURLRepository;
+import br.com.herculano.urlshortener.api.respository.jpa_respository.EncurtadorURLRepository;
 
 @Service
 public class EncurtadoURLService extends ServiceTemplate<EncurtadoURL, EncurtadorURLRepository, CommonMessage> {
@@ -26,7 +28,9 @@ public class EncurtadoURLService extends ServiceTemplate<EncurtadoURL, Encurtado
 
 		String code = geraCode();
 
-		EncurtadoURL entity = new EncurtadoURL(null, code, url);
+		LocalDateTime dataCriacao = LocalDateTime.now();
+		
+		EncurtadoURL entity = new EncurtadoURL(null, code, url, dataCriacao, null, StatusEnum.ATIVO.getCodigo());
 
 		getRepository().save(entity);
 

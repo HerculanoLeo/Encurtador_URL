@@ -15,8 +15,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.springframework.web.servlet.view.RedirectView;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import br.com.herculano.urlshortener.api.constant.ConfiguracaoEnum;
 import br.com.herculano.urlshortener.api.controller.response.EncurtadorURLResponse;
 import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
+import br.com.herculano.urlshortener.api.service.ConfiguracaoService;
 import br.com.herculano.urlshortener.api.service.EncurtadoURLService;
 
 @Controller
@@ -25,6 +27,9 @@ public class EncurtadorController {
 	
 	@Autowired
 	private EncurtadoURLService service;
+	
+	@Autowired
+	private ConfiguracaoService configuracaoService;
 
 	@GetMapping("/api")
 	@ResponseBody
@@ -41,15 +46,18 @@ public class EncurtadorController {
 		EncurtadoURL entity = service.buscaPorCode(code);
 		
 		attributes.addFlashAttribute("flashAttribute", "redirectWithRedirectView");
-        attributes.addAttribute("attribute", "redirectWithRedirectView");
 		
         return new RedirectView(entity.getUrl());
 	}
 	
 	private String geraURL(String code) {
-		UriComponentsBuilder builder = UriComponentsBuilder.fromPath("http://127.0.0.1:8080/");
+		String url = configuracaoService.getValorPorCodigo(ConfiguracaoEnum.DOMINIO);
+		
+		
+		UriComponentsBuilder builder = UriComponentsBuilder.fromPath(url);
 		builder.pathSegment(code);
 		
-		return builder.toUriString();
+		String uriString = builder.toUriString();
+		return uriString;
 	}
 }

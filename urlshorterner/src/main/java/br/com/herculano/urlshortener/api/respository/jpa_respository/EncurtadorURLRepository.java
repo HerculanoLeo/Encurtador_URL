@@ -1,4 +1,4 @@
-package br.com.herculano.urlshortener.api.respository.jpsRespository;
+package br.com.herculano.urlshortener.api.respository.jpa_respository;
 
 import java.util.Optional;
 

@@ -1,4 +1,4 @@
-package br.com.herculano.urlshortener.api.configuration.handlerErrors;
+package br.com.herculano.urlshortener.api.configuration.handler_errors;
 
 import java.nio.file.AccessDeniedException;
 import java.util.List;

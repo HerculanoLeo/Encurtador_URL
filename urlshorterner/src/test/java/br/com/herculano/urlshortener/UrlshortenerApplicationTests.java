@@ -1,10 +1,10 @@
-package br.com.herculano.urlshorterner;
+package br.com.herculano.urlshortener;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UrlshorternerApplicationTests {
+class UrlshortenerApplicationTests {
 
 	@Test
 	void contextLoads() {

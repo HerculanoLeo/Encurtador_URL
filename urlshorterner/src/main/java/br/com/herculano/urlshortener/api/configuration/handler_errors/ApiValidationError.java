@@ -1,4 +1,4 @@
-package br.com.herculano.urlshortener.api.configuration.handlerErrors;
+package br.com.herculano.urlshortener.api.configuration.handler_errors;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
