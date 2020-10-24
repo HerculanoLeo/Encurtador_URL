@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
+import br.com.herculano.urlshortener.api.configuration.system_message.MessageTemplate;
 import br.com.herculano.urlshortener.api.constant.StatusEnum;
 import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
 import br.com.herculano.urlshortener.api.respository.jpa_respository.EncurtadorURLRepository;
@@ -42,7 +43,9 @@ public class EncurtadoURLService extends ServiceTemplate<EncurtadoURL, Encurtado
 		Optional<EncurtadoURL> optional = getRepository().findByCode(code);
 
 		if (!optional.isPresent()) {
-			throw new EntityNotFoundException(message.getNotFound());
+			Object[] args = {code};
+			
+			throw new EntityNotFoundException(CommonMessage.getCodigo(message.getNotFound(), args));
 		}
 
 		return optional.get();
