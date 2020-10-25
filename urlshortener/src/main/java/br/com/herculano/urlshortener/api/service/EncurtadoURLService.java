@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.herculano.urlshortener.api.configuration.system_message.CommonMessage;
-import br.com.herculano.urlshortener.api.configuration.system_message.MessageTemplate;
 import br.com.herculano.urlshortener.api.constant.StatusEnum;
 import br.com.herculano.urlshortener.api.entity.EncurtadoURL;
 import br.com.herculano.urlshortener.api.respository.jpa_respository.EncurtadorURLRepository;
