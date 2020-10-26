@@ -2,7 +2,7 @@ package br.com.herculano.urlshortener.api.constant;
 
 public enum ConfiguracaoEnum {
 	
-	DOMINIO("dominio.url");
+	DOMINIO("encurtador.url.dominio");
 
 	private String codigo;
 	
